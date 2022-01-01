@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SpaWeb</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/servicios.js"></script>
+  </head>
+
+  <body>
+     <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <h1 class="section-title">SISTEMA DE RESERVAS DE SPA</h1>
+		 
+        </div>
+        <div class="row">
+
+          <div id="menu1" class="col-xs-12 col-md-6 col-lg-4">
+            <div class="about-item">
+              <div class="about-text">
+                <h3><a>Consultar servicios</a></h3>
+                <p>Consulte los servicios y horarios disponibles</p>
+					<div class="item content">
+						<ul class="slider">
+							<li id="slide1">
+								<img src="C:\Users\Pc\Documents\ReservaServicio actualizado\img\01.png" />
+							</li>
+
+							<li id="slide2">
+								<img src="C:\Users\Pc\Documents\ReservaServicio actualizado\img\02.png" />
+							</li>
+
+							<li id="slide3">
+								<img src="C:\Users\Pc\Documents\ReservaServicio actualizado\img\03.png" />
+							</li>
+						</ul>
+
+						<ul class= "menu">
+							<li>
+								<a href="#slide1">Depilaciones</a>
+							</li>
+
+							<li>
+								<a href="#slide2">Tratamientos Faciales</a>
+							</li>
+
+							<li>
+								<a href="#slide3">Masajes</a>
+							</li>
+
+						</ul>
+					</div>
+				
+                <a class="btn btn-common btn-rm" href="#" onclick="app.mostrarservicios();">Consultar</a>
+              </div>
+            </div>
+          </div>
+		  
+          <div id="menu2" class="col-xs-12 col-md-6 col-lg-4">
+            <div class="about-item">
+              <div class="about-text">
+                <h3><a>Consultar Reservas</a></h3>
+                <p>Consulte sus reservas por número de cédula</p>
+				<div class="item content">
+						<ul class="sucursal1">
+							<li id="slide1">
+								<iframe width="270" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.88194584846498%2C-2.1958936875485433%2C-79.87989127635957%2C-2.1943659503239497&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/>
+								<a>Sucursal Centro</a>
+							</li>
+
+							<li id="sucursal2">
+							<br>
+								<iframe width="270" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.91219311952592%2C-2.1669843472226944%2C-79.91013854742052%2C-2.1654565806454866&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/>
+								<a>Sucursal Urdesa</a>
+							</li>
+
+							<li id="sucursal3">
+							<br>
+								<iframe width="270" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.9142959713936%2C-2.1982120928087707%2C-79.91224139928819%2C-2.1966843579549753&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/>
+								<a>Sucursal Sur</a>
+							</li>
+						</ul>
+					</div>
+				
+                <input id="docConsulta" class="mb-20 form-control" name="cedula" placeholder="Ingresa tu número de cédula">
+                <a class="btn btn-common btn-rm" href="#" onclick="app.consultarReserva();">Consultar</a>
+              </div>
+            </div>
+          </div>
+		  
+          <div id="campodoc" style="display: none;">
+            <form action="javascript:void(0);" method="POST" id="reserva-edit">
+              <p id="datosservicio"></p>
+              <input type="text" id="documento" placeholder="Cedula de Ciudadania">
+			  <input type="text" id="nombre" placeholder="Nombre">
+			  <input type="text" id="apellido" placeholder="Apellido">
+			  <input type="text" id="domicilio" placeholder="Domicilio">
+			  <input type="text" id="telefono" placeholder="Telefono">
+			  <input type="text" id="correo" placeholder="Correo Electronico">
+              <input type="submit" value="Reservar" />
+            </form>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <table>
+                <tbody id="servicios"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <br>
+        <a id="btnback" style="display: none;" href="#" class="btn btn-common btn-rm" onclick="app.Volver();">Volver</a>
+      </div>
+    </section>
+  </body>
+</html>
